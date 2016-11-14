@@ -1,0 +1,104 @@
+{
+  "list": [
+    {
+      "id": 1,
+      "name": "商品信息",
+      "icon": "sku_information",
+      "children": [
+        {
+          "id": 11,
+          "parentId": 1,
+          "name": "百世店商品库",
+          "url": "/bestSkuStore"
+        },
+        {
+          "id": 12,
+          "parentId": 1,
+          "name": "店铺内商品库",
+          "url": "/selfSkuStore"
+        },
+        {
+          "id": 13,
+          "parentId": 1,
+          "name": "新增商品",
+          "url": "/addNewSku"
+        },
+        {
+          "id": 14,
+          "parentId": 1,
+          "name": "商品类目",
+          "url": "/skuClass"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "采购管理",
+      "icon": "purchase_control",
+      "children": [
+        {
+          "id": 21,
+          "parentId": 2,
+          "name": "进货单",
+          "url": "/stockOrder"
+        },
+        {
+          "id": 22,
+          "parentId": 2,
+          "name": "退货单",
+          "url": "/creditOrder"
+        },
+        {
+          "id": 23,
+          "parentId": 2,
+          "name": "供应商",
+          "url": "/supplier"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "库存管理",
+      "icon": "store_control",
+      "children": [
+        {
+          "id": 31,
+          "parentId": 3,
+          "name": "店铺库存",
+          "url": "/inventory"
+        },
+        {
+          "id": 32,
+          "parentId": 3,
+          "name": "调整单",
+          "url": "/adjustment"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "报表管理",
+      "icon": "form_control",
+      "children": [
+        {
+          "id": 41,
+          "parentId": 4,
+          "name": "流水报表",
+          "url": "/turnoverReport"
+        },
+        {
+          "id": 42,
+          "parentId": 4,
+          "name": "商品报表",
+          "url": "/skuReport"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "下载管理",
+      "icon": "down_control",
+      "url": "/download"
+    }
+  ]
+}

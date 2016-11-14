@@ -1,0 +1,354 @@
+@import url('normalize.css');
+@import url('mainColor');
+@import url('../../node_modules/el-table/lib/style/table.css');
+
+.make-pdt(40);
+.make-pdt(@n, @i: 2) when (@i =< @n) {
+  .pdt@{i} {
+    padding-top: (@i*1px);
+  }
+  .make-pdt(@n, (@i + 2));
+}
+
+.make-pdr(40);
+.make-pdr(@n, @i: 2) when (@i =< @n) {
+  .pdr@{i} {
+    padding-right: (@i*1px);
+  }
+  .make-pdr(@n, (@i + 2));
+}
+
+.make-pdb(40);
+.make-pdb(@n, @i: 2) when (@i =< @n) {
+  .pdb@{i} {
+    padding-bottom: (@i*1px);
+  }
+  .make-pdb(@n, (@i + 2));
+}
+
+.make-pdl(40);
+.make-pdl(@n, @i: 2) when (@i =< @n) {
+  .pdl@{i} {
+    padding-left: (@i*1px);
+  }
+  .make-pdl(@n, (@i + 2));
+}
+
+.make-mgt(60);
+.make-mgt(@n, @i: -10) when (@i =< @n) {
+  .mgt@{i} {
+    margin-top: (@i*1px);
+  }
+  .make-mgt(@n, (@i + 2));
+}
+
+.make-mgr(60);
+.make-mgr(@n, @i: 2) when (@i =< @n) {
+  .mgr@{i} {
+    margin-right: (@i*1px);
+  }
+  .make-mgr(@n, (@i + 2));
+}
+
+.make-mgb(60);
+.make-mgb(@n, @i: 2) when (@i =< @n) {
+  .mgb@{i} {
+    margin-bottom: (@i*1px);
+  }
+  .make-mgb(@n, (@i + 2));
+}
+
+.make-mgl(60);
+.make-mgl(@n, @i: 2) when (@i =< @n) {
+  .mgl@{i} {
+    margin-left: (@i*1px);
+  }
+  .make-mgl(@n, (@i + 2));
+}
+
+.make-font(36);
+.make-font(@n, @i: 12) when (@i =< @n) {
+  .font@{i} {
+    font-size: (@i*1px);
+  }
+  .make-font(@n, (@i + 2));
+}
+
+.clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+    zoom: 1;
+  }
+}
+
+body {
+  font-size: 14px;
+  color: #333;
+  font-family: 'Microsoft Yahei';
+}
+
+.opacity(@opacity) {
+  @opa: @opacity * 100;
+  filter: unquote("progid:DXImageTransform.Microsoft.Alpha(Opacity=(@{opa}))");
+  opacity: @opacity;
+}
+
+.color-3 {
+  color: #333;
+}
+
+.color-6 {
+  color: #666;
+}
+
+.color-9 {
+  color: #999;
+}
+
+.color-f {
+  color: #fff;
+}
+
+.color-bc {
+  color: #bcbcbc;
+}
+
+.color-red {
+  color: @red;
+}
+
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+a, a:hover {
+  text-decoration: none;
+}
+
+.no-padding {
+  padding: 0 !important;
+}
+
+.break {
+  word-break: break-all;
+  white-space: normal;
+}
+
+.blue {
+  color: @blue;
+  cursor: pointer;
+  &:hover {
+    color: #069
+  }
+}
+
+.red {
+  color: @red
+}
+
+.text-left {
+  text-align: left
+}
+
+.text-right {
+  text-align: right
+}
+
+.text-center {
+  text-align: center
+}
+
+.ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap
+}
+
+.hide {
+  display: none
+}
+
+.show {
+  display: block
+}
+
+.bold {
+  font-weight: 700
+}
+
+.inline {
+  display: inline-block;
+}
+
+.container {
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.point {
+  cursor: pointer;
+}
+
+ul, li {
+  padding: 0;
+  margin: 0;
+}
+
+.relative {
+  position: relative;
+}
+
+.mid {
+  vertical-align: middle
+}
+
+button {
+  outline: none
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 400;
+  font-size: 1em;
+  margin: 0
+}
+
+.row {
+  margin-bottom: 16px;
+  margin-right: -10px;
+  line-height: 14px;
+}
+
+.col-1, .col-10, .col-11, .col-12, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9 {
+  box-sizing: border-box;
+  float: left;
+  min-height: 1px;
+  padding-right: 10px;
+  position: relative
+}
+
+.col-12 {
+  float: none
+}
+
+.col-1 {
+  width: 8.33333%
+}
+
+.col-2 {
+  width: 16.6667%
+}
+
+.col-3 {
+  width: 25%
+}
+
+.col-4 {
+  width: 33.3333%
+}
+
+.col-5 {
+  width: 41.6667%
+}
+
+.col-6 {
+  width: 50%
+}
+
+.col-7 {
+  width: 58.3333%
+}
+
+.col-8 {
+  width: 66.6667%
+}
+
+.col-9 {
+  width: 75%
+}
+
+.col-10 {
+  width: 83.3333%
+}
+
+.col-11 {
+  width: 91.6667%
+}
+
+.col-12 {
+  width: 100%
+}
+
+.col-offset-12 {
+  margin-left: 100%
+}
+
+.col-offset-11 {
+  margin-left: 91.6667%
+}
+
+.col-offset-10 {
+  margin-left: 83.3333%
+}
+
+.col-offset-9 {
+  margin-left: 75%
+}
+
+.col-offset-8 {
+  margin-left: 66.6667%
+}
+
+.col-offset-7 {
+  margin-left: 58.3333%
+}
+
+.col-offset-6 {
+  margin-left: 50%
+}
+
+.col-offset-5 {
+  margin-left: 41.6667%
+}
+
+.col-offset-4 {
+  margin-left: 33.3333%
+}
+
+.col-offset-3 {
+  margin-left: 25%
+}
+
+.col-offset-2 {
+  margin-left: 16.6667%
+}
+
+.col-offset-1 {
+  margin-left: 8.33333%
+}
+
+.col-offset-0 {
+  margin-left: 0
+}
+
+input::-webkit-input-placeholder {
+  color: #999;
+}
+
+input:-ms-input-placeholder {
+  color: #999;
+}
+
+input:-moz-placeholder {
+  color: #999;
+}
+
+input::-moz-placeholder {
+  color: #999;
+}

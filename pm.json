@@ -1,0 +1,19 @@
+{
+  "apps": [
+    {
+      "name": "pos_web",
+      "script": "./bin/www",
+      "watch": false,
+      "env": {
+        "NODE_ENV": "production",
+        "PORT": "9090"
+      },
+      "log_date_format": "YYYY-MM-DD HH:mm:SS",
+      "error_file": "./pm2/logs/error.log",
+      "out_file": "./pm2/logs/out.log",
+      "pid_file": "./pm2/logs/pm_id.pid",
+      "instances": "max",
+      "exec_mode": "cluster"
+    }
+  ]
+}

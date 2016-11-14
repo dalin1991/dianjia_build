@@ -1,0 +1,7 @@
+{
+  "turnoverReportDetail": "turnoverReport",
+  "creditOrderDetail": "creditOrder",
+  "stockOrderDetail": "stockOrder",
+  "adjustDebitDetail": "adjustment",
+  "adjustStockDetail": "adjustment"
+}

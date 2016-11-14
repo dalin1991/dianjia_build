@@ -1,0 +1,114 @@
+@import url('../../../lib/style/mainColor');
+
+.menu {
+  background-color: #fff;
+  display: table-cell;
+  vertical-align: top;
+  border-right: 1px solid #ddd;
+  min-height: 850px;
+}
+
+.nav .menu-icon {
+  display: inline-block;
+  vertical-align: text-bottom;
+  margin-left: -18px;
+  position: relative;
+  top: -1px;
+}
+
+.nav-list > li {
+  position: relative;
+  border-top: 1px solid #ddd;
+}
+
+.nav-list > li.no-border {
+  border: 0;
+}
+
+.nav-list > li > a {
+  color: #aaa;
+  font-size: 16px;
+  padding-left: 30px;
+  display: block;
+  line-height: 46px;
+}
+
+.nav-list > li > ul.submenu {
+  clear: both;
+  line-height: 1.5;
+  position: relative;
+  padding: 0;
+  margin: 0;
+}
+
+ul.submenu > li > a:hover {
+  background-color: #f4f5f9;
+  text-underline: none;
+  border-right: 1px solid #ddd;
+}
+
+ul.submenu > li > a {
+  padding: 12px 15px 12px 35px;
+  font-size: 14px;
+  color: #333;
+  display: block;
+}
+
+li.active > a {
+  background-color: @mainColor;
+  color: #333;
+  border-right: 1px solid #ddd;
+}
+
+.index_icon {
+  background: url("./img/index_icon.png");
+  width: 18px;
+  height: 18px;
+  &.active {
+    background: url("./img/index_icon_active.png");
+  }
+}
+
+.sku_information {
+  background: url("./img/sku_information.png");
+  width: 18px;
+  height: 18px;
+}
+
+.purchase_control {
+  background: url("./img/purchase_control.png");
+  width: 18px;
+  height: 18px;
+}
+
+.store_control {
+  background: url("./img/store_control.png");
+  width: 18px;
+  height: 18px;
+}
+
+.form_control {
+  background: url("./img/form_control.png");
+  width: 18px;
+  height: 18px;
+}
+
+.shop_control {
+  background: url("./img/shop_control.png");
+  width: 18px;
+  height: 18px;
+  &.active {
+    background: url("./img/shop_control_active.png");
+  }
+}
+
+.down_control {
+  background: url("./img/down_control.png");
+  width: 18px;
+  height: 18px;
+  &.active {
+    background: url("./img/down_control_active.png");
+  }
+}
+
+

@@ -1,0 +1,27 @@
+doctype html
+html
+    head
+        title="百世店铺"
+        meta(name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no")
+        meta(name="renderer" content="webkit")
+        meta(http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1")
+        meta(http-equiv="Pragma" content="no-cache")
+        meta(http-equiv="Cache-Control" content="no-cache")
+        meta(http-equiv="Expires" content="0")
+        script(src="/lib/jquery.1.9.js")
+        // if lt IE 9
+           script(src="https://as.alipayobjects.com/g/component/??console-polyfill/0.2.2/index.js,es5-shim/4.1.14/es5-shim.min.js,es5-shim/4.1.14/es5-sham.min.js,html5shiv/3.7.2/html5shiv.min.js,media-match/2.0.2/media.match.min.js")
+        if csses
+            each item in csses
+                link(rel='stylesheet', href=item)
+    body
+        block content
+
+    script(src="/lib/reflux.js")
+    script(src="/lib/echarts.common.min.js")
+    script(src="/lib/alertModal.js")
+    if env === 'dev'
+        script(src="/reload/reload.js")
+    if scripts
+        each item in scripts
+            script(src= item)

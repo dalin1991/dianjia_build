@@ -1,0 +1,19 @@
+{
+  "mock": {
+    "/bestRMS": " http://10.45.10.40:8080/mockjsdata/42"
+  },
+  "lifan": {
+    "/bestRMS/*": {
+      "target": "http://10.64.227.22:8080",
+      "logLevel": "debug",
+      "changeOrigin": true
+    }
+  },
+  "test": {
+    "/bestRMS/*": {
+      "target": "http://10.45.11.13",
+      "logLevel": "debug",
+      "changeOrigin": true
+    }
+  }
+}
