@@ -1,16 +1,17 @@
 require('node-jsx').install(); //enable use jsx in express
 require('./middleware/ignore'); //ignore css
 
-var path = require('path');
-var express = require('express');
-var jsdom = require('jsdom').jsdom;
-var favicon = require('serve-favicon');
-var logger = require('morgan');
-var cookieParser = require('cookie-parser');
+var path = require('path'),
+    express = require('express'),
+    jsdom = require('jsdom').jsdom,
+    favicon = require('serve-favicon'),
+    logger = require('morgan'),
+// var cookieParser = require('cookie-parser');
 // var bodyParser = require('body-parser');
-var routes = require('./routes/index.js');
-var app = express();
-
+    routes = require('./routes/index.js'),
+    fileRoute = require('./routes/file.js'),
+    app = express(),
+    multer = require('multer');
 // set env
 var env = process.env.NODE_ENV || '';
 app.set('env', env);
@@ -56,7 +57,7 @@ app.use(logger('dev'));
 // app.use(bodyParser.urlencoded({
 //     extended: false
 // }));
-app.use(cookieParser());
+// app.use(cookieParser());
 
 if (app.get('env') === 'dev') {
     var webpack = require('webpack'),
@@ -96,6 +97,9 @@ if (app.get('env') === 'dev') {
 } else {
     app.use(express.static(path.join(__dirname, 'public'))); //production use static
 }
+
+app.use('/upload/file', multer({dest: 'files/'}).single('file'), fileRoute);
+// app.use('/upload/file', multer({dest: 'files/'}).single('file'), fileRoute);
 
 app.use('/', (req, res, next) => {
     if (/^\/$/.test(req.originalUrl)) {

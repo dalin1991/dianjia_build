@@ -6,7 +6,7 @@ var ExtractTextPlugin = require("extract-text-webpack-plugin");
 var GetFileNamePlugin = require("./middleware/getFileNamePlugin");
 var parseEntry = require('./middleware/ParsePlugin').parseEntry;
 var enter = parseEntry(path.join(__dirname, "source"), {
-    ignore: ['lib']
+    ignore: ['lib', 'remotes']
 });
 
 module.exports = {

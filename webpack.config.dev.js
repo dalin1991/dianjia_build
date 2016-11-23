@@ -4,7 +4,7 @@ var outputPath = path.join(__dirname, 'public', 'assets');
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
 var parseEntry = require('./middleware/ParsePlugin').parseEntry;
 var enter = parseEntry(path.join(__dirname, "source"), {
-    ignore: ['lib']
+    ignore: ['lib', 'remotes']
 });
 
 module.exports = {

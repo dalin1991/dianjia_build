@@ -6,7 +6,7 @@ const menuList = require('../../property/menu.json');
 require('@best/dianjia_alertModal');
 require('@best/dianjia_alertModal/alertModal.css');
 require('./lib/menu.less');
-require('../../lib/style/dianjia_publice.less');
+require('../lib/style/dianjia_publice.less');
 
 class Menu extends React.Component {
     constructor(props) {

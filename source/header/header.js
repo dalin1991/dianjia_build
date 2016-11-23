@@ -4,7 +4,7 @@
 const React = require('react');
 const ReactDOM = require('react-dom');
 const storage = require('beyond-lib/lib/storage');
-const {logout} = require('../../remotes/public.js');
+const {logout} = require('../remotes/public.js');
 const {Dropdown} = require('el-table');
 require('./lib/header.less');
 

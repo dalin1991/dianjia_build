@@ -30,17 +30,6 @@ router.get('/login', (req, res, next) => {
 		csses: currentPaths.css
 	});
 });
-router.get('/losePassword', (req, res, next) => {
-	const Model = require(enter.losePassword),
-		status = res.locals.webpackStats || {},
-		commonPaths = dev ? getFilePath(status, 'common') : source.common,
-		currentPaths = dev ? getFilePath(status, 'losePassword') : source.losePassword;
-	res.render('login', {
-		content: ReactDOMServer.renderToString(<Model />),
-		scripts: Array.from(commonPaths.js).concat(Array.from(currentPaths.js)),
-		csses: currentPaths.css
-	});
-});
 /* GET home page. */
 router.get('/:file', (req, res, next) => {
 	const fileName = req.params.file,
